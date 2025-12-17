@@ -1,7 +1,7 @@
 resource "azurerm_public_ip" "main" {
   name                = "${var.component}-${var.env}-ip"
   location              = data.azurerm_resource_group.main.location
-  resource_group_name   = data.azurerm_resource_group.main.name
+  resource_group_name   = data.azurerm_resource_group.main.namee
   allocation_method   = "Static"
 
   tags = {
