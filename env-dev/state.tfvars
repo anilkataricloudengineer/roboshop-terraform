@@ -1,4 +1,4 @@
 resource_group_name  = "project-setup-1"
 storage_account_name = "katari"
-container_name       = "roboshop"
+container_name       = "roboshop-tf-states"
 key                  = "dev.tfstate"
