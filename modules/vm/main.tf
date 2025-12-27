@@ -80,8 +80,8 @@ resource "azurerm_virtual_machine" "main" {
   }
   os_profile {
     computer_name  = var.component
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    admin_username = var.admin_username
+    admin_password = var.admin_password
   }
   os_profile_linux_config {
     disable_password_authentication = false
@@ -91,6 +91,7 @@ resource "azurerm_virtual_machine" "main" {
   }
 
 }
+
 
 resource "null_resource" "ansible"{
 
