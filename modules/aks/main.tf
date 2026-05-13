@@ -13,6 +13,9 @@ resource "azurerm_kubernetes_cluster" "main" {
     min_count = 1
     max_count = 10
   }
+  aci_connector_linux {
+    subnet_name = "/subscriptions/52cd5f2c-0d28-4429-b80d-950089f20b98/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/project-setup-network/subnets/default"
+  }
 
   identity {
     type = "SystemAssigned"
