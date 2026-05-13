@@ -13,6 +13,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     min_count = 1
     max_count = 10
     pod_subnet_id = "/subscriptions/52cd5f2c-0d28-4429-b80d-950089f20b98/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/project-setup-network/subnets/default"
+    vent_Subnet_id = "/subscriptions/52cd5f2c-0d28-4429-b80d-950089f20b98/resourceGroups/project-setup-1/providers/Microsoft.Network/virtualNetworks/project-setup-network/subnets/default"
   }
 
   aci_connector_linux {
