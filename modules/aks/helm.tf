@@ -11,6 +11,6 @@ EOF
 resource "helm_release" "external-secrets" {
   depends_on = [null_resource.kubeconfig]
   name       = "external-secrets"
-  repository = "https://charts.external-secret.io"
+  repository = "https://charts.external-secrets.io"
   chart      = "external-secrets"
 }
