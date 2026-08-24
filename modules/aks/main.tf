@@ -2,7 +2,7 @@ resource "azurerm_kubernetes_cluster" "main" {
   name                = "main"
   location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
-  kubernetes_version  = "1.33.6"
+  kubernetes_version  = "1.36.1"
   dns_prefix          = "dev"
 
   default_node_pool {
