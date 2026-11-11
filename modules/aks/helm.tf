@@ -29,7 +29,7 @@ resource "null_resource" "argocd" {
   provisioner "local-exec" {
     command = <<EOF
 kubectl apply -f modules/aks/files/argocd-ns.yaml
-kubectl apply --server-side --force-conflicts -f modules/aks/files/argocd.yaml
+kubectl apply --server-side --force-conflicts -f modules/aks/files/argocd.yaml -n argocd
 EOF
   }
 }
