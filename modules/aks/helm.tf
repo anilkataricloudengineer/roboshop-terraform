@@ -23,3 +23,13 @@ kubectl apply -f /opt/vault-token.yml
 EOF
   }
 }
+
+resource "null_resource" "argocd" {
+  depends_on = [null_resource.kubeconfig]
+  provisioner "local-exec" {
+    command = <<EOF
+kubectl apply -f ${path.module}/files/argocd-ns.yaml
+kubectl apply -f ${path.module}/files/argocd.yaml
+EOF
+  }
+}
