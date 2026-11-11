@@ -28,8 +28,8 @@ resource "null_resource" "argocd" {
   depends_on = [null_resource.kubeconfig]
   provisioner "local-exec" {
     command = <<EOF
-kubectl apply -f ${path.module}/files/argocd-ns.yaml
-kubectl apply -f ${path.module}/files/argocd.yaml
+kubectl apply -f modules/aks/files/argocd-ns.yaml
+kubectl apply --server-side --force-conflicts -f modules/aks/files/argocd.yaml
 EOF
   }
 }
